@@ -3,7 +3,8 @@ import * as fs from "node:fs";
 import * as path from "node:path";
 
 const PORT = 1313;
-const EVENTS_DIR = path.join(__dirname, 'events');
+const parent = path.dirname(__dirname);
+const EVENTS_DIR = path.join(parent, 'tmp/events');
 
 fs.mkdirSync(EVENTS_DIR, { recursive: true });
 
